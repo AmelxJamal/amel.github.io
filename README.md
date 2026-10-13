@@ -35,7 +35,13 @@ in [JK Creative Co.'s palette article](https://www.jkcreativecompany.com/blog/fe
 ivory `#F7F3ED`, blush `#EFD8D6`, sage `#C2C6B9`, rose `#DBA1A2`, and brown `#422B23`.
 Darker brown text/link shades and lighter button fills keep small text readable.
 All palette tokens live in `academic.css`. The introduction uses a simple text layout.
-Publication panels and profile links have subtle hover effects.
+Publication panels and profile links have subtle hover effects. Each publication has
+a native click-to-expand abstract control that works with touch, keyboards, and
+JavaScript disabled. Open panels grow slightly wider on desktop and use a more
+transparent fill; on small screens they expand vertically within the page width.
+The two arXiv abstracts are reproduced under their linked CC BY 4.0 licenses.
+The workshop paper has a clearly labeled summary based on its public Scholar
+record and the previously retrieved OpenReview abstract; its record is truncated.
 
 The header's motion control pauses the animation and remembers the choice locally.
 The site automatically disables animation when the device requests reduced motion.
