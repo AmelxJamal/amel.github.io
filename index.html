@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#f7f3ed">
   <link rel="stylesheet" href="assets/css/academic.css">
   <script src="assets/js/ambient.js" defer></script>
+  <script src="assets/js/publications.js" defer></script>
 </head>
 <body>
   <div class="ambient-background" aria-hidden="true">
@@ -133,6 +134,14 @@
       </address>
     </section>
   </main>
+
+  <dialog id="publication-dialog" class="publication-dialog" aria-labelledby="dialog-paper-title">
+    <div class="dialog-toolbar">
+      <span class="dialog-eyebrow">Publication</span>
+      <button class="dialog-close" type="button" autofocus aria-label="Close publication">Close <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="dialog-content"><h2 id="dialog-paper-title">Publication details</h2></div>
+  </dialog>
 
   <footer class="site-footer wrap">
     <span>Amel Abdelraheem</span>

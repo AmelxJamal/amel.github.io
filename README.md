@@ -8,6 +8,7 @@ HTML, CSS, and a small optional script with no build step, external fonts, or li
 - `index.html`: biography, profile links, publications, and contact details.
 - `assets/css/academic.css`: colors, typography, spacing, and mobile layout.
 - `assets/js/ambient.js`: pause/resume control and reduced-motion preferences.
+- `assets/js/publications.js`: centered publication dialogs and focus restoration.
 - `assets/img/grain.svg`: locally generated, seamless background texture.
 - `.nojekyll`: keeps GitHub Pages serving the files directly.
 
@@ -36,9 +37,12 @@ ivory `#F7F3ED`, blush `#EFD8D6`, sage `#C2C6B9`, rose `#DBA1A2`, and brown `#42
 Darker brown text/link shades and lighter button fills keep small text readable.
 All palette tokens live in `academic.css`. The introduction uses a simple text layout.
 Publication panels and profile links have subtle hover effects. Each publication has
-a native click-to-expand abstract control that works with touch, keyboards, and
-JavaScript disabled. Open panels grow slightly wider on desktop and use a more
-transparent fill; on small screens they expand vertically within the page width.
+an abstract control that opens a centered reading panel. The panel uses opaque sage
+surfaces with a dimmed, blurred backdrop, and scrolls within the viewport on mobile.
+Click a card or its abstract control to open it; paper links still open their sources.
+Close with the button, Escape, or a backdrop click. Native dialogs keep keyboard
+focus within the panel; closing restores focus to the triggering abstract control.
+Without JavaScript or dialog support, abstracts expand inline on a sage background.
 The two arXiv abstracts are reproduced under their linked CC BY 4.0 licenses.
 The workshop paper has a clearly labeled summary based on its public Scholar
 record and the previously retrieved OpenReview abstract; its record is truncated.
