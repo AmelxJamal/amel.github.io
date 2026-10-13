@@ -30,7 +30,7 @@ computer first. You can also open `index.html` directly in a browser.
 ## Visual style and motion
 
 The warm ivory background has softly blurred blush, sage, and dusty rose shapes
-with a light SVG grain overlay. The colors are inspired by the Luna Rose palette
+with a pronounced, slightly coarser SVG grain overlay. The colors are inspired by the Luna Rose palette
 in [JK Creative Co.'s palette article](https://www.jkcreativecompany.com/blog/feminine-brand-color-palettes):
 ivory `#F7F3ED`, blush `#EFD8D6`, sage `#C2C6B9`, rose `#DBA1A2`, and brown `#422B23`.
 Darker brown text/link shades and lighter button fills keep small text readable.
