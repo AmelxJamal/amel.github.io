@@ -1,12 +1,14 @@
 # Amel Abdelraheem — academic website
 
 A simple, responsive academic homepage for GitHub Pages. The homepage uses plain
-HTML and CSS with no build step, JavaScript, external fonts, or runtime dependencies.
+HTML, CSS, and a small optional script with no build step, external fonts, or libraries.
 
 ## Edit the site
 
 - `index.html`: biography, profile links, publications, and contact details.
 - `assets/css/academic.css`: colors, typography, spacing, and mobile layout.
+- `assets/js/ambient.js`: pause/resume control and reduced-motion preferences.
+- `assets/img/grain.svg`: locally generated, seamless background texture.
 - `.nojekyll`: keeps GitHub Pages serving the files directly.
 
 Publication entries are grouped by year in `index.html`. Copy an existing
@@ -24,6 +26,17 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open <http://localhost:8000>. If working over SSH, forward port 8000 to your
 computer first. You can also open `index.html` directly in a browser.
+
+## Visual style and motion
+
+The gray background has softly blurred pink, blue, and violet shapes with a light
+SVG grain overlay. The introduction includes a decorative neural network with
+slowly travelling signals. Publication panels and profile links have subtle hover effects.
+
+The header's motion control pauses the animation and remembers the choice locally.
+The site automatically disables animation when the device requests reduced motion.
+Without JavaScript, content and links work normally and CSS still respects reduced
+motion. Colors, animation timing, and mobile layout are in `academic.css`.
 
 ## Content sources
 
