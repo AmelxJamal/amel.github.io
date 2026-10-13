@@ -13,15 +13,17 @@
     title.id = 'dialog-paper-title';
     title.textContent = article.querySelector('h4').textContent;
     const abstractHeading = document.createElement('h3');
-    abstractHeading.textContent = summary.querySelector('span').textContent;
+    abstractHeading.textContent = article.querySelector('.publication-abstract').dataset.abstractHeading || 'Abstract';
     const abstract = document.createElement('section');
     abstract.className = 'dialog-abstract';
     abstract.append(abstractHeading, article.querySelector('.abstract-content').cloneNode(true));
+    const figure = article.querySelector('.publication-figure');
     content.replaceChildren(
       title,
       article.querySelector('.authors').cloneNode(true),
       article.querySelector('.venue').cloneNode(true),
       article.querySelector('.paper-links').cloneNode(true),
+      ...(figure ? [figure.cloneNode(true)] : []),
       abstract
     );
     opener = summary;

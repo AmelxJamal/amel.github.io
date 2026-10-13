@@ -69,11 +69,20 @@
               <p class="authors">Yiming Qin, Ke Wang, <strong>Amel Abdelraheem</strong>, Adam Hazimeh, Pascal Frossard</p>
               <p class="venue">arXiv preprint, 2026</p>
               <p class="paper-links"><a href="https://arxiv.org/abs/2610.08108">arXiv</a><a href="https://arxiv.org/pdf/2610.08108" aria-label="PDF: Enhancing Diffusion Language Models with Autoregressive Post-Training Weights">PDF</a></p>
-              <details class="publication-abstract">
+              <details class="publication-abstract" data-abstract-heading="Abstract">
                 <summary aria-labelledby="abstract-label-diffusion paper-diffusion">
-                  <span id="abstract-label-diffusion">Abstract</span>
+                  <span id="abstract-label-diffusion">More</span>
                   <span class="abstract-indicator" aria-hidden="true"></span>
                 </summary>
+                <figure class="publication-figure">
+                  <a href="figures/diffusion-notation.svg" target="_blank" rel="noopener noreferrer" aria-label="Open diffusion model notation figure at full size">
+                    <img src="figures/diffusion-notation.svg" width="707" height="231" loading="lazy" alt="Figure 1a: autoregressive and diffusion base models, their post-trained versions, and the task vectors connecting them.">
+                  </a>
+                  <a href="figures/diffusion-method.svg" target="_blank" rel="noopener noreferrer" aria-label="Open A2D method figure at full size">
+                    <img src="figures/diffusion-method.svg" width="637" height="250" loading="lazy" alt="Figure 1b: A2D transfers an autoregressive task vector to a diffusion model and merges it with diffusion post-training updates.">
+                  </a>
+                  <figcaption>Figure 1 · A2D notation and method overview. <a href="https://arxiv.org/html/2610.08108v1#S1.F1">Qin et al.</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Click either image to enlarge.</figcaption>
+                </figure>
                 <div class="abstract-content">
                   <p>Diffusion language models (dLLMs) have emerged as a promising alternative to autoregressive (AR) language models, offering flexible token-update orders and parallel decoding. Recent dLLMs are often initialized from pretrained AR models before diffusion conversion in order to inherit their learned representations. After the conversion, however, they typically ignore the extensive post-training ecosystem of their AR ancestors. In this work, we show that these existing AR post-training weight updates can instead be effectively recycled to enhance diffusion models. Despite the changes by AR-to-diffusion conversion, directly adding an AR post-training weight update to a diffusion base model remains effective, bringing its performance close to that achieved by direct diffusion post-training. Notably, AR and diffusion post-training updates are nearly orthogonal in weight space, yet induce substantially more aligned representation changes in the diffusion model. Their distinct updates are also complementary: composing their weights can retain gains from both regimes and further improve the post-trained diffusion model. Based on these findings, we propose A2D, a simple training-free framework for enhancing diffusion models with existing AR post-training resources. A2D can transfer capabilities from AR post-trained models to diffusion base models, and further improve already post-trained diffusion models by composing AR and diffusion post-training updates. Across various dLLMs, including Dream, DreamReasoner, DiffuCoder, Dream-Coder, Nemotron-Labs-Diffusion, and DiffusionGemma, A2D reliably improves instruction following, mathematical reasoning, and coding with both supervised fine-tuning and reinforcement learning updates, without additional training, or inference-time computation.</p>
                   <p class="abstract-source"><a href="https://arxiv.org/abs/2610.08108">Source: arXiv</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
@@ -87,11 +96,17 @@
               <p class="authors">Adam Hazimeh, <strong>Amel Abdelraheem</strong>, Ke Wang, Mariam Salman, Ljiljana Dolamic, Gérôme Bovet, Pascal Frossard</p>
               <p class="venue">Trustworthy AI for Good (AI4GOOD) Workshop at ICML, 2026</p>
               <p class="paper-links"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;user=HQ9NlGwAAAAJ&amp;citation_for_view=HQ9NlGwAAAAJ:9yKSN-GCB0IC&amp;hl=en" aria-label="Scholar entry: Beyond the Prompt">Scholar entry</a></p>
-              <details class="publication-abstract">
+              <details class="publication-abstract" data-abstract-heading="Abstract summary">
                 <summary aria-labelledby="abstract-label-jailbreak paper-jailbreak">
-                  <span id="abstract-label-jailbreak">Abstract summary</span>
+                  <span id="abstract-label-jailbreak">More</span>
                   <span class="abstract-indicator" aria-hidden="true"></span>
                 </summary>
+                <figure class="publication-figure">
+                  <object class="publication-figure-pdf" data="figures/beyond-the-prompt.pdf#toolbar=0&amp;navpanes=0&amp;view=Fit" type="application/pdf" aria-label="Overview figure for Beyond the Prompt">
+                    <p><a href="figures/beyond-the-prompt.pdf" target="_blank" rel="noopener noreferrer">Open the Beyond the Prompt figure (PDF)</a></p>
+                  </object>
+                  <figcaption>Overview figure · Beyond the Prompt. <a href="figures/beyond-the-prompt.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>.</figcaption>
+                </figure>
                 <div class="abstract-content">
                   <p>Diffusion language models refine several masked tokens together, creating internal representations of future responses before those responses are finalized. This work studies whether those representations can reveal harmful intent that a prompt-only detector misses. The proposed ReFuse detector combines signals from the prompt and the initially masked response using lightweight linear classifiers, without changing the underlying model or its decoding process. In experiments on LLaDA-8B-Instruct, the combined detector lowers average attack success to 3.31%, compared with 11.27% for prompt-only detection and 63.29% without a defense. Refusals on benign utility tasks remain below 1%. The results indicate that early response representations provide useful complementary evidence for detecting jailbreaks.</p>
                   <p class="abstract-source"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;user=HQ9NlGwAAAAJ&amp;citation_for_view=HQ9NlGwAAAAJ:9yKSN-GCB0IC&amp;hl=en">Source abstract</a> · Summarized for this page.</p>
@@ -110,11 +125,17 @@
               <p class="authors"><strong>Amel Abdelraheem</strong>, Alessandro Favero, Gerome Bovet, Pascal Frossard</p>
               <p class="venue">arXiv preprint, 2025</p>
               <p class="paper-links"><a href="https://arxiv.org/abs/2510.14845">arXiv</a><a href="https://arxiv.org/pdf/2510.14845" aria-label="PDF: Backdoor Unlearning by Linear Task Decomposition">PDF</a></p>
-              <details class="publication-abstract">
+              <details class="publication-abstract" data-abstract-heading="Abstract">
                 <summary aria-labelledby="abstract-label-unlearning paper-unlearning">
-                  <span id="abstract-label-unlearning">Abstract</span>
+                  <span id="abstract-label-unlearning">More</span>
                   <span class="abstract-indicator" aria-hidden="true"></span>
                 </summary>
+                <figure class="publication-figure">
+                  <a href="figures/backdoor-unlearning.svg" target="_blank" rel="noopener noreferrer" aria-label="Open backdoor unlearning overview figure at full size">
+                    <img src="figures/backdoor-unlearning.svg" width="261" height="78" loading="lazy" alt="Figure 1: isolate the backdoor direction through triggered fine-tuning, then subtract it from model weights while retaining clean task performance.">
+                  </a>
+                  <figcaption>Figure 1 · Backdoor unlearning through task decomposition. <a href="https://arxiv.org/html/2510.14845v1#S2.F1">Abdelraheem et al.</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Click the image to enlarge.</figcaption>
+                </figure>
                 <div class="abstract-content">
                   <p>Foundation models have revolutionized computer vision by enabling broad generalization across diverse tasks. Yet, they remain highly susceptible to adversarial perturbations and targeted backdoor attacks. Mitigating such vulnerabilities remains an open challenge, especially given that the large-scale nature of the models prohibits retraining to ensure safety. Existing backdoor removal approaches rely on costly fine-tuning to override the harmful behavior, and can often degrade performance on other unrelated tasks. This raises the question of whether backdoors can be removed without compromising the general capabilities of the models. In this work, we address this question and study how backdoors are encoded in the model weight space, finding that they are disentangled from other benign tasks. Specifically, this separation enables the isolation and erasure of the backdoor&#x27;s influence on the model with minimal impact on clean performance. Building on this insight, we introduce a simple unlearning method that leverages such disentanglement. Through extensive experiments with CLIP-based models and common adversarial triggers, we show that, given the knowledge of the attack, our method achieves approximately perfect unlearning, while retaining, on average, 96% of clean accuracy. Additionally, we demonstrate that even when the attack and its presence are unknown, our method successfully unlearns backdoors by proper estimation using reverse-engineered triggers. Overall, our method consistently yields better unlearning and clean accuracy tradeoffs when compared to present state-of-the-art defenses.</p>
                   <p class="abstract-source"><a href="https://arxiv.org/abs/2510.14845">Source: arXiv</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>

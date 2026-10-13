@@ -102,6 +102,12 @@ h2 { font-size: 23px; font-weight: 600; line-height: 1.4; letter-spacing: -.5px;
 .abstract-indicator::after { width: 1px; height: 12px; top: 1px; left: 6px; transition: transform .2s; }
 .publication-abstract[open] .abstract-indicator::after { transform: rotate(90deg); }
 .abstract-content { max-width: 80ch; padding-block: 8px 2px; color: var(--text); font-size: 14px; line-height: 1.85; }
+.publication-figure { margin: 20px 0; padding: 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.publication-figure > a { display: block; border-radius: 4px; }
+.publication-figure > a + a { margin-top: 18px; }
+.publication-figure img { display: block; width: 100%; height: auto; }
+.publication-figure-pdf { display: block; width: 100%; height: clamp(240px, 45vh, 420px); border: 0; }
+.publication-figure figcaption { margin-top: 14px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .abstract-source { margin-bottom: 0; color: var(--muted); font-size: 11px; }
 /* Centered reading panel, with an opaque sage surface over the warm page. */
 .publication-interactive { cursor: pointer; }

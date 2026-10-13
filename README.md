@@ -10,6 +10,7 @@ HTML, CSS, and a small optional script with no build step, external fonts, or li
 - `assets/js/ambient.js`: pause/resume control and reduced-motion preferences.
 - `assets/js/publications.js`: centered publication dialogs and focus restoration.
 - `assets/img/grain.svg`: locally generated, seamless background texture.
+- `figures/`: original overview SVGs and the supplied workshop figure PDF.
 - `.nojekyll`: keeps GitHub Pages serving the files directly.
 
 Publication entries are grouped by year in `index.html`. Copy an existing
@@ -37,11 +38,12 @@ ivory `#F7F3ED`, blush `#EFD8D6`, sage `#C2C6B9`, rose `#DBA1A2`, and brown `#42
 Darker brown text/link shades and lighter button fills keep small text readable.
 All palette tokens live in `academic.css`. The introduction uses a simple text layout.
 Publication panels and profile links have subtle hover effects. Each publication has
-an abstract control that opens a centered reading panel. The panel uses opaque sage
+a “More” control that opens a centered reading panel with the paper’s overview
+figure (when available) and abstract. The panel uses opaque sage
 surfaces with a dimmed, blurred backdrop, and scrolls within the viewport on mobile.
-Click a card or its abstract control to open it; paper links still open their sources.
+Click a card or its More control to open it; paper links still open their sources.
 Close with the button, Escape, or a backdrop click. Native dialogs keep keyboard
-focus within the panel; closing restores focus to the triggering abstract control.
+focus within the panel; closing restores focus to the triggering More control.
 Without JavaScript or dialog support, abstracts expand inline on a sage background.
 The two arXiv abstracts are reproduced under their linked CC BY 4.0 licenses.
 The workshop paper has a clearly labeled summary based on its public Scholar
