@@ -1,0 +1,84 @@
+/* Simple academic homepage. Shared colors and spacing are defined here. */
+:root {
+  color-scheme: light;
+  --text: #252525;
+  --muted: #626262;
+  --accent: #a51c30;
+  --line: #e5e5e5;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.wrap { width: min(860px, calc(100% - 48px)); margin-inline: auto; }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 25px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.site-name { color: var(--text); font-weight: 600; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 24px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); text-decoration: underline; }
+.about { padding-block: 65px 44px; }
+.eyebrow { color: var(--accent); font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+h1 { font-size: clamp(2rem, 5vw, 2.7rem); font-weight: 600; line-height: 1.2; letter-spacing: -1px; margin: 0 0 15px; }
+.affiliation { margin: 0 0 28px; color: var(--muted); line-height: 1.6; }
+.biography { max-width: 740px; }
+p { margin: 0 0 16px; }
+strong { font-weight: 600; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; margin: 25px 0 0; padding: 0; font-size: 14px; }
+.section { padding-block: 35px; border-top: 1px solid var(--line); }
+h2 { font-size: 23px; font-weight: 600; line-height: 1.4; margin: 0 0 24px; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 28px; }
+.section-heading h2 { margin: 0; }
+.subtle-link { font-size: 13px; }
+.publication-year { display: grid; grid-template-columns: 65px minmax(0, 1fr); gap: 20px; }
+.publication-year h3 { margin: 0; font-size: 15px; font-weight: 500; color: var(--muted); padding-top: 2px; }
+.publication-list { list-style: none; padding: 0; margin: 0; }
+.publication-list li { margin-bottom: 30px; }
+.publication-year:last-child li:last-child { margin-bottom: 0; }
+h4 { font-size: 17px; line-height: 1.5; font-weight: 600; margin: 0 0 5px; }
+h4 a { color: var(--text); text-decoration: none; }
+h4 a:hover { color: var(--accent); text-decoration: underline; }
+.authors { font-size: 14px; line-height: 1.65; margin: 0 0 4px; }
+.venue { color: var(--muted); font-size: 14px; margin: 0 0 7px; }
+.paper-links { display: flex; gap: 18px; font-size: 13px; margin: 0; }
+.contact h2 { margin-bottom: 17px; }
+address { font-style: normal; }
+address > a { overflow-wrap: anywhere; }
+address p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+.site-footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-block: 24px 35px; color: var(--muted); font-size: 12px; }
+.skip-link { position: absolute; top: 8px; left: 12px; transform: translateY(-200%); background: #fff; padding: 8px 12px; z-index: 2; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 560px) {
+  .wrap { width: calc(100% - 36px); }
+  .site-header { align-items: flex-start; flex-direction: column; gap: 10px; padding-block: 18px; }
+  nav { gap: 22px; }
+  .about { padding-block: 40px 32px; }
+  .section { padding-block: 28px; }
+  .publication-year { grid-template-columns: 1fr; gap: 12px; }
+  .publication-year h3 { font-weight: 600; }
+  .section-heading { margin-bottom: 24px; }
+}
+@media print {
+  .site-header, .skip-link, .site-footer { display: none; }
+  .wrap { width: 100%; }
+  .about { padding-top: 0; }
+  a { color: inherit; }
+  article { break-inside: avoid; }
+}
